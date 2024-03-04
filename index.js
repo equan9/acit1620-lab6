@@ -74,3 +74,11 @@ console.log(urls);
 console.log(randomUrls);
 
 /*Part Two */
+const images = document.div.querySelectorAll(".card img");
+
+/*Part Three */
+for (let i = 0; i <images.length; i++){
+    randomSources = randomUrls
+    images[i].src = randomSources [i];
+}
+document.querySelector("h1").textContent += "!"
