@@ -1,19 +1,3 @@
-const shuffle = (list) => {
-    templist = list
-
-    let currentIndex = templist.length
-    let randomIndex
-
-    while (currentIndex > 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex)
-        currentIndex--
-
-        const temp = templist[currentIndex]
-        templist[currentIndex] = templist[randomIndex]
-        templist[randomIndex] = temp 
-    }
-    return templist
-}
 /*
     Step 1:
     - Create an array named 'urls' of eight strings containing the following values:
@@ -58,7 +42,7 @@ const shuffle = (list) => {
 */
 
 /*Part 1*/
-const url = [ "https://i.ibb.co/sjvVrG3/fruit-plyh.jpg", 
+const urls = [ "https://i.ibb.co/sjvVrG3/fruit-plyh.jpg", 
 "https://i.ibb.co/g3tqj4w/fruit-zxcv.jpg", 
 "https://i.ibb.co/88Hy4rD/fruit-wert.jpg", 
 "https://i.ibb.co/NmNMLKF/fruit-astt.jpg", 
@@ -68,4 +52,25 @@ const url = [ "https://i.ibb.co/sjvVrG3/fruit-plyh.jpg",
 "https://i.ibb.co/CVwKM8Z/fruit-ecuh.jpg",
 "https://i.ibb.co/ccNyKX0/fruit-uzxc.jpg"
 ];
-console.log(url);
+console.log(urls)
+const shuffle = (list) => {
+    templist = list
+
+    let currentIndex = templist.length
+    let randomIndex
+
+    while (currentIndex > 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex)
+        currentIndex--
+
+        const temp = templist[currentIndex]
+        templist[currentIndex] = templist[randomIndex]
+        templist[randomIndex] = temp 
+    }
+    return templist
+};
+const randomUrls = shuffle(urls);
+console.log(urls);
+console.log(randomUrls);
+
+/*Part Two */
