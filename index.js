@@ -42,7 +42,7 @@
 */
 
 /*Part 1*/
-const urls = [ "https://i.ibb.co/sjvVrG3/fruit-plyh.jpg", 
+urls = ["https://i.ibb.co/sjvVrG3/fruit-plyh.jpg", 
 "https://i.ibb.co/g3tqj4w/fruit-zxcv.jpg", 
 "https://i.ibb.co/88Hy4rD/fruit-wert.jpg", 
 "https://i.ibb.co/NmNMLKF/fruit-astt.jpg", 
@@ -50,9 +50,8 @@ const urls = [ "https://i.ibb.co/sjvVrG3/fruit-plyh.jpg",
 "https://i.ibb.co/9thfVhB/fruit-hjkl.jpg",
 "https://i.ibb.co/YtTfqvD/fruit-dcnj.jpg",
 "https://i.ibb.co/CVwKM8Z/fruit-ecuh.jpg",
-"https://i.ibb.co/ccNyKX0/fruit-uzxc.jpg"
-];
-console.log(urls)
+"https://i.ibb.co/ccNyKX0/fruit-uzxc.jpg"]
+
 const shuffle = (list) => {
     templist = list
 
@@ -69,15 +68,13 @@ const shuffle = (list) => {
     }
     return templist
 };
-const randomUrls = shuffle(urls);
-console.log(urls);
-console.log(randomUrls);
+randomUrls = shuffle(urls)
 
 /*Part Two */
-const images = document.div.querySelectorAll(".card img");
+images = document.querySelectorAll(".card img");
 
 /*Part Three */
-for (let i = 0; i <images.length; i++){
+for (let i = 0; i <images.length; i++) {
     randomSources = randomUrls
     images[i].src = randomSources [i];
 }
